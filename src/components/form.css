@@ -1,0 +1,83 @@
+.form-nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #eeeeee;
+
+}
+
+.form-nav li{
+    list-style: none;
+    /* border: solid 2px red; */
+    padding: 0 15px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+
+form {
+    font-family: monospace;
+    margin: 1em;
+  }
+
+.required::before {
+    content: "*";
+    color: red;
+    font-weight: 900;
+}
+
+input {
+    border-radius: 0.25rem;
+    height: 20px;
+    width: 100px;
+    border: 1px solid #000;
+    margin-top: 1.5em;
+    margin-left: 2em;
+    padding: 5px
+}
+
+.form-group {
+    display: inline-block
+}
+
+label{
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #333;
+    height: 20px;
+    width: 11em;
+    margin-top: 1.2em;
+    display: inline-block
+    /* float:left; */
+  }
+
+label a {
+    text-decoration: none;
+    color: #3277b3;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+  .btn {
+      margin: 10px 5px 10px 0px;
+      padding: 6px 12px;
+      background-color: #17467d;
+      color:white;
+      text-decoration: none;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      margin-left: 1em;
+
+  }
+
+  .btn:hover {
+    cursor:pointer;
+  }
+  
+
+
