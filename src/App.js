@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Dropdown from './components/Dropdown';
 import Home from './components/Home';
 import Form from './components/Form';
+import Visualize from './components/Visualize'
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/tool' component={Form} />
+          <Route exact path='/data' component={Visualize} />
         </Switch>
 
         <footer className="w-full bg-gray-200 p-2 bottom-0">

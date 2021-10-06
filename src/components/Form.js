@@ -224,7 +224,7 @@ class Form extends React.Component {
                             <li className="">1. Voting Classifier: A Voting Classifier is a machine learning model that trains on an ensemble of numerous models and predicts an output based on their highest probability of chosen class as the output.</li>
                             <li className="mt-2">2. Fuzzy logic:  Robust, simple structure, good performance with high AUC, but the model may predicted a lower value when the actual survival rate is high.</li>
                         </ul>
-                        <p className="">Voting: {this.state.treePro ? this.state.treePro : '-'}{this.state.treePro ? '%' : ''}
+                        <p className="">VOTING: {this.state.treePro ? this.state.treePro : '-'}{this.state.treePro ? '%' : ''}
                             <span className="text-sm text-red-600"> {this.state.steroid}</span>
                         </p>
                         <p className="mt-2">FUZZY: {this.state.fuzzyPro ? this.state.fuzzyPro : '-'}{this.state.fuzzyPro ? '%' : ''}</p>
