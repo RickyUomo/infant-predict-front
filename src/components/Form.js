@@ -1,10 +1,10 @@
 import React from 'react';
 import * as d3 from "d3";
-import DataService from '../services/service'
-import './form.css'
-import Report from './Report'
+import DataService from '../services/service';
+import './form.css';
+import Report from './Report';
 
-const URL = 'https://gist.githubusercontent.com/RickyUomo/b55072a481d91469bf2700dad27ee313/raw/infants.csv'
+const URL = 'https://gist.githubusercontent.com/RickyUomo/b55072a481d91469bf2700dad27ee313/raw/infants.csv';
 
 
 
@@ -34,16 +34,13 @@ class Form extends React.Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.clearForm = this.clearForm.bind(this)
-    }
-
+    };
 
     componentDidMount() {
         d3.csv(URL).then(d => {
             this.setState({ data: d })
         })
-    }
-
-
+    };
 
     clearForm() {
         this.setState(prevState => {
@@ -60,7 +57,7 @@ class Form extends React.Component {
             }
         })
         this.setState({ report: false })
-    }
+    };
 
     handleSubmit(event) {
         event.preventDefault();
@@ -97,19 +94,12 @@ class Form extends React.Component {
         this.setState({ report: false })
     }
 
-
-
     render() {
         return (
             <div className="min-h-screen">
                 <div className="flex flex-col items-center">
-
-
-
                     <p className="required pt-6" >Indicate Required Field</p>
                     <form className="grid" onSubmit={this.handleSubmit}>
-
-
 
                         <div className="form-group">
                             <label className="required">
@@ -127,10 +117,9 @@ class Form extends React.Component {
                             />
                         </div>
 
-
                         <div className="form-group">
                             <label className="required">
-                                <a>Birth Weight</a>
+                                <span>Birth Weight</span>
                                 <p style={{ fontSize: ".6em" }}>(From 400-1200 grams)</p>
                             </label>
                             <input
@@ -159,7 +148,7 @@ class Form extends React.Component {
 
                         <div>
                             <label className="required">
-                                <a>Gender</a>
+                                <span>Gender</span>
                             </label>
                             <select className="ml-6 mt-6 pl-2 p-1 border w-18 border-black rounded" name="gender" value={this.state.gender} onChange={this.handleChange}>
                                 <option value="male">Male</option>
@@ -170,7 +159,7 @@ class Form extends React.Component {
 
                         <div className="form-group">
                             <label>
-                                <a>Multiple Birth</a>
+                                <span>Multiple Birth</span>
                             </label>
                             <input
                                 type="checkbox"
@@ -183,7 +172,7 @@ class Form extends React.Component {
 
                         <div className="form-group">
                             <label>
-                                <a>Level 3 Hospital</a>
+                                <span>Level 3 Hospitspanl</span>
                             </label>
                             <input
                                 type="checkbox"
@@ -215,10 +204,10 @@ class Form extends React.Component {
                         </h1>
                         <ul
                             className={`${this.state.hover ?
-                                "absolute bg-yellow-400 p-2 \
-                                text-red-900  rounded shadow-2xl \
-                                left-5 right-5 \
-                                sm:left-10 sm:right-10 lg:left-60 lg:right-60"
+                                `absolute bg-yellow-400 p-2 
+                                text-red-900  rounded shadow-2xl 
+                                left-5 right-5 
+                                sm:left-10 sm:right-10 lg:left-60 lg:right-60`
                                 : "hidden"}`}
                         >
                             <li className="">1. Voting Classifier: A Voting Classifier is a machine learning model that trains on an ensemble of numerous models and predicts an output based on their highest probability of chosen class as the output.</li>
