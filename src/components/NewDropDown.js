@@ -5,7 +5,7 @@ function NewDropDown() {
     return (
         <>
             <ul
-                className="absolute bg-black h-screen w-full left-0 py-4 flex flex-col"
+                className="absolute bg-black h-full w-full left-0 py-4 z-10 flex flex-col"
             >
                 {MenuItems.map((item, index) => {
                     return (

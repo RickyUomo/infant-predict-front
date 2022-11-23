@@ -1,8 +1,6 @@
-import React from 'react'
-
 export default function Home() {
     return (
-        <div className='bg-bg-img bg-cover min-h-screen 
+        <div className='bg-bg-img bg-cover min-h-screen
             text-center text-white font-mono'>
 
             <div className="pt-64">
@@ -11,7 +9,6 @@ export default function Home() {
                 <p className="text-xl">Personal Report</p>
                 <p className="text-xl">Visualize Dataset</p>
             </div>
-
         </div>
     )
-}
+};
