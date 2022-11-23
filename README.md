@@ -8,5 +8,3 @@ Built up with React, TailwindCss, Django REST framework
 
 ## Mobile First
 Using TailwindCSS to implement
-
-### More info coming later
