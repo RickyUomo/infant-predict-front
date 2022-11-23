@@ -11,7 +11,6 @@ export default function Dropdown({ isOpen, toggle }) {
             }
             onClick={toggle}
         >
-            
             <Link to='/' className='pb-4 font-bold hover:text-white'>
                 Home
             </Link>

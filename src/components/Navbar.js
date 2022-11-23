@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from "react-router-dom";
 
 export default function Navbar({ toggle }) {
@@ -27,9 +27,7 @@ export default function Navbar({ toggle }) {
                 <Link to="/tool" className="py-2 px-4 hover:bg-blue-700 rounded-xl">Tool</Link>
                 <Link to='/data' className="py-2 px-4 hover:bg-blue-700 rounded-xl">Data</Link>
             </div>
-
-
         </div>
 
     )
-}
+};

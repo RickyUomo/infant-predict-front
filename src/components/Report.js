@@ -21,14 +21,6 @@ export default function Report(props) {
     let high = null
     let low = null
 
-    function getGreeting(name) {
-        if (name) {
-            return <h1>Hello, {name}!</h1>;
-        }
-        return <h1>Hello, Stranger.</h1>;
-    }
-
-
     if (treePro > fuzzyPro) {
         high = treePro
         low = fuzzyPro

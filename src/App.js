@@ -11,31 +11,37 @@ import Navbar from './components/Navbar';
 import Dropdown from './components/Dropdown';
 import Home from './components/Home';
 import Form from './components/Form';
-import Visualize from './components/Visualize'
+import Visualize from './components/Visualize';
 
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const toggle = () => {
     setIsOpen(!isOpen);
-  }
+  };
+
+  const debounce = (fn, ms) => {
+    let timer;
+    return () => {
+      clearTimeout(timer);
+      timer = setTimeout(fn, ms);
+    }
+  };
+
+  const hideMenu = () => {
+    if (windowWidth > 768 && isOpen) setIsOpen(false);
+    setWindowWidth(window.innerWidth);
+  };
 
   useEffect(() => {
-    const hideMenu = () => {
-      if (window.innerWidth > 768 && isOpen) {
-        setIsOpen(false);
-      }
-    };
+    const handleResize = debounce(hideMenu, 100);
 
-    window.addEventListener('resize', hideMenu);
+    window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', hideMenu);
-    }
+    return () => window.removeEventListener('resize', handleResize);
   });
-
-
 
   return (
     <Router>
@@ -55,6 +61,6 @@ function App() {
     </Router>
 
   );
-}
+};
 
 export default App;
