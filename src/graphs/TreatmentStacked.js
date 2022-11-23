@@ -10,7 +10,7 @@ export default function TreatmentStacked(props) {
     const data = props.data
 
     const MAS = []
-    data.map(d => {
+    data.forEach(d => {
         MAS.push({ mas: d.MaternalAntenatalSteroid, death: d.death })
     })
 
@@ -21,7 +21,7 @@ export default function TreatmentStacked(props) {
     let inMasAlive = 0
     let fullMasAlive = 0
 
-    MAS.map(d => {
+    MAS.forEach(d => {
         if (d.mas === 'no treatment' & d.death === '1') {
             noMasDeath += 1
         } else if (d.mas === 'incomplete treatment' & d.death === '1') {
@@ -44,8 +44,8 @@ export default function TreatmentStacked(props) {
     const treatmentStackedOptions = {
         tooltip: {
             trigger: 'axis',
-            axisPointer: {         
-                type: 'shadow'        
+            axisPointer: {
+                type: 'shadow'
             }
         },
         legend: {

@@ -23,7 +23,7 @@ export default function GenderWeightMortality(props) {
     [{ gender: "M", bw: '2400-2700', D: 0, A: 0 }, { gender: "F", bw: '2400-2700', D: 0, A: 0 }]]
 
     // map BW data
-    data.map(d => {
+    data.forEach(d => {
         let bw = parseInt(d.birthweight)
         if (bw >= 400 & bw < 600) { // bw range 400-599
             if (d.gender === 'male') { // male
@@ -208,7 +208,7 @@ export default function GenderWeightMortality(props) {
     let bwMale = []
     let bwFemale = []
 
-    BW.map(d => {
+    BW.forEach(d => {
         bwMale.push(Math.round((d[0].D / (d[0].D + d[0].A)) * 1000) / 10)
         bwFemale.push(Math.round((d[1].D / (d[1].D + d[1].A)) * 1000) / 10)
     })

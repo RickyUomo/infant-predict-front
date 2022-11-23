@@ -10,20 +10,20 @@ export default function GenderMultipPie(props) {
 
     const data = props.data
 
-    const pie = {MaleD:0, MaleA:0, FemaleD:0, FemaleA:0}
+    const pie = { MaleD: 0, MaleA: 0, FemaleD: 0, FemaleA: 0 }
 
-    data.map(d => {
-        if(d.Level3 === 'no'){
-            if(d.gender === 'male'){
-                if(d.death === '1'){
+    data.forEach(d => {
+        if (d.Level3 === 'no') {
+            if (d.gender === 'male') {
+                if (d.death === '1') {
                     pie.MaleD += 1
-                }else{
+                } else {
                     pie.MaleA += 1
                 }
-            }else{
-                if(d.death === '1'){
+            } else {
+                if (d.death === '1') {
                     pie.FemaleD += 1
-                }else{
+                } else {
                     pie.FemaleA += 1
                 }
             }
@@ -31,7 +31,7 @@ export default function GenderMultipPie(props) {
     })
 
     const option = {
-        
+
         tooltip: {
             trigger: 'item',
             formatter: '{c} ({d}%)'

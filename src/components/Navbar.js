@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import NewDropDown from './NewDropDown';
 
 export default function Navbar({ toggle }) {
     return (
