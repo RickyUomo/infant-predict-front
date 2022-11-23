@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { MenuItems } from './MenuItems';
 
-function NewDropDown({ handleClick }) {
+function NewDropDown() {
     return (
         <>
             <ul
                 className="absolute bg-black h-screen w-screen left-0 py-4 flex flex-col"
-                onClick={handleClick}
             >
                 {MenuItems.map((item, index) => {
                     return (
