@@ -113,7 +113,7 @@ class Form extends React.Component {
 
                         <div className="form-group">
                             <label className="required">
-                                <a>Gestational Weeks</a>
+                                <a href="0">Gestational Weeks</a>
                                 <p style={{ fontSize: ".6em" }}>(From 22-32 weeks)</p>
                             </label>
                             <input
